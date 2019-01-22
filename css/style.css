@@ -153,19 +153,59 @@ p{
 .navbar-default .navbar-toggle:focus .icon-bar, .navbar-default .navbar-toggle:hover .icon-bar{
     background-color: #fff;
 }
+
+/* Changed 21/09/18 */
 .tv-banner{
-    background: rgba(0, 0, 0, 0) url("../images/banner.jpg") no-repeat fixed right center / cover ;
-    height: calc(100vh - 75px);
+    background-color: black;
+    height: calc(100vh - 150px);
+    width: 100%;
+    margin-top: 75px;
     position: relative;
     box-shadow: 0 5px 20px 1px rgba(0, 0, 0, 0.15);
 }
-.tv-banner-content{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+
+.tv-banner .container-fluid, .tv-banner .row {
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
 }
+
+.tv-banner .container-fluid .row > *{
+    display: block;
+}
+
+.picture {
+    background-image: url("../images/sumitsidana.png");
+    display: block;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position-y: center;
+}
+
+.tv-banner-content > * {
+    text-align: left;
+}
+
+
+@media (max-width: 767px) {
+    .tv-banner .container-fluid {
+       padding: 0;
+    }
+    .tv-banner-content {
+        top: auto !important;
+        width: 100%;
+        padding: 0;
+    }
+    .picture {
+        display: none !important;
+    }
+}
+
 .tv-banner-content .tv-hi-text{
-    color: #333;
+    color: #FFFFFF;
     font-size: 36px;
     line-height: 52px;
 }
@@ -182,7 +222,7 @@ p{
     padding-left: 100px;
 }
 .tv-profession{
-    color: #333;
+    color: #FFFFFF;
     font-size: 14px;
     line-height: 36px;
     text-transform: uppercase;
